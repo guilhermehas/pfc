@@ -1,0 +1,81 @@
+<div style="text-align:center;">
+    	<form novalidate>
+        
+            <table width="600" height="100" border="0">
+                <tr>
+                    <th scope="row">Numero de Vertices:</th>
+                    <td><input name="nmin" ng-model="arvores.nmin" type="number" value=0 /></td>
+                    <td>até</td>
+                    <td><input name="nmax" ng-model="arvores.nmax" type="number" value=1000 /></td>
+                </tr>
+                  <tr>
+                    <th scope="row">Conectividade Algebrica:</th>
+                    <td><input name="alfamin" ng-model="arvores.alfamin" step="0.01" type="number" value=0 /></td>
+                    <td>até</td>
+                    <td><input name="alfamax" ng-model="arvores.alfamax" step="0.01" type="number" value=1000 /></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Tipo:</th>
+                    <td><input ng-model="arvores.tipo" type="radio" value="1" />
+                      1</td>
+                    <td>&nbsp;</td>
+                    <td><input ng-model="arvores.tipo" type="radio" value="2" />
+                      2 </td>
+                  </tr>
+                  <tr>
+                      <td></td>
+                    <td><input ng-model="arvores.tipo" type="radio" value="both" />
+                      Ambos </td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">Diametro:</th>
+                    <td><input name="diametromin" ng-model="arvores.diametromin" type="number" value=0 /></td>
+                    <td>até</td>
+                    <td><input name="diametromax" ng-model="arvores.diametromax" type="number" value=1000 /></td>
+                  </tr>
+                  <tr>
+                    <th></th></form>
+                    <th> 
+                        <button ng-click="getarvores()">Procurar</button>
+                    </th>
+                    <th></th>
+              </table>
+              
+
+    <table class='bordered'>
+        <tr>
+        <th>Matrix</th>
+        <th>n</th>
+        <th>Identificador</th>
+        <th>Conectividade Algebrica</th>
+        <th>Tipo</th>
+        <th>Diametro</th>
+        </tr>
+
+        <tbody ng-repeat= '(key,line) in table'>
+        <tr>
+            <td><button
+                ng-click="showArvore(key,line)">show</button></td>
+            <td ng-bind="line.n"></td>
+            <td ng-bind="line.identificacao"></td>
+            <td ng-bind="line.alfa"></td>
+            <td ng-bind="line.tipo"></td>
+            <td ng-bind="line.diametro"></td>
+        </tr>
+            <tr ng-if="line.ifShow"  class="col-sm-1">
+                <td colspan=1><pre ng-bind="line.matrix"></pre></td>
+                <td colspan=5><nvd3 options="line.options" data="line.data"></nvd3></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <table>
+        <tr>
+            <th><button ng-click='preview()'> &lt; </button></th>
+            <th>{[{page*lenpage+1}]} /
+                {[{page*lenpage+table.length}]}</th>
+            <th><button ng-click='advance()'> &gt; </button></th>
+        <tr>
+    </table>
+</div> 

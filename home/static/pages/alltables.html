@@ -1,0 +1,27 @@
+<div style="overflow-x:auto;">
+    <form>
+        
+    <table class="bordered">
+        
+        <tr>
+        
+            <th ng-repeat='(number,name) in fields' class="col-xs-1">{[{name[0] |
+                translate}]}</th>
+        </tr>
+
+        <tr ng-repeat= '(key,line) in table'>
+            <td class="col-xs-1" ng-repeat="(key2,element) in fields">{[{line[element[0]]}]}</td>
+        </tr>
+    </table>
+    
+    <table>
+        <tr>
+            <th><button ng-click='preview()'> &lt; </button></th>
+            <th>{[{1+(page-1)*10}]} /
+                {[{(page-1)*10+qt}]}</th>
+                    <th><button ng-click='advance(page+1)'> &gt; </button></th>
+        </tr>
+    </table>
+    </form>
+</div> 
+

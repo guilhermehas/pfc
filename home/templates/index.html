@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-controller='defaultcontroller'>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="static/css/bootstrap.css"></link>
+<link rel="stylesheet" href="static/css/mycss.css"></link>
+<script src="static/js/lib/bootbox.min.js"></script>   
+
+
+<!--
+<script src="static/js/lib/angular-translate.js"></script>   
+<script src="static/js/lib/angular-translate-loader-partial.js"></script>   
+<script src="static/js/lib/angular-translate-loader-url.js"></script>   
+-->
+
+<script src="https://cdn.rawgit.com/SlexAxton/messageformat.js/v1.0.2/messageformat.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-animate.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-cookies.js"></script>
+<script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate/2.15.2/angular-translate.js"></script>
+<script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate-interpolation-messageformat/2.15.2/angular-translate-interpolation-messageformat.js"></script>
+<script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate-storage-cookie/2.15.2/angular-translate-storage-cookie.js"></script>
+<script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate-storage-local/2.15.2/angular-translate-storage-local.js"></script>
+<script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate-loader-url/2.15.2/angular-translate-loader-url.js"></script>
+<script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate-loader-static-files/2.15.2/angular-translate-loader-static-files.js"></script>
+<script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate-handler-log/2.15.2/angular-translate-handler-log.js"></script>
+
+
+
+<script src="static/js/controllers/tablecontroller.js"> </script>
+<script src="static/js/app.js"></script>
+<script src="static/js/d3.min.js"></script>
+<script src="static/js/nv.d3.min.js"></script>
+<script src="static/js/angular-nvd3.min.js"> </script>
+
+<link rel="stylesheet" type="text/css" href="static/css/styleTable.css" />
+<link rel="stylesheet" type="text/css" href="static/css/nv.d3.min.css" />
+
+<head>
+</head>
+
+<body>
+
+<div class="view-container">
+    <div ng-include="'static/pages/navbar.html'"></div>
+    <div class="container" class="row" ng-view class="view-frame"></div>
+</div>
+
+
+</body>
+</html>
+

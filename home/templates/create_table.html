@@ -1,0 +1,17 @@
+<form method="post" action="{% url 'table_validate' %}"
+    enctype="multipart/form-data">
+{% csrf_token %}
+<table>
+<tr>
+    <td>{{ form.jsonFile.label_tag }}</td>
+    <td>{{ form.jsonFile }}</td>
+</tr>
+<tr>
+    <td>{{ form.tableFile.label_tag }}</td>
+    <td>{{ form.tableFile }}</td>
+</tr>
+</table>
+
+<input type="submit" value="create_table_form" />
+<input type="hidden" name="next" value="{{ next }}" />
+</form>

@@ -1,0 +1,19 @@
+<form novalidate>
+    <table width="600" height="100" border="0">
+        <tr ng-repeat="find in fields" ng-if="['int','float'].indexOf(find[1]) > -1">
+            <th scope="row">{[{find[0] | translate}]}:</th>
+            <td><input ng-model="params[find[0]+'_min']" type="number" value=0 /></td>
+            <td>até</td>
+            <td><input ng-model="params[find[0]+'_max']" type="number" value=1000 /></td>
+        </tr>
+        <tr>
+            <th> 
+                <button ng-click="changeTable()">Procurar Aqui</button>
+                <a download="content.txt" ng-href="{[{ download() }]}" class="btn btn-primary">Download
+                    CSV</a>
+            </th>
+            <th> 
+            </th>
+        </tr>
+    </table>
+</form>
